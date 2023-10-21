@@ -21,14 +21,14 @@ namespace Factory.Controllers
       return View(_db.Machines.ToList());
     }
 
-    public ActionResult Create()
+    public ActionResult New()
     {
       ViewBag.PageTitle = "Add a Machine";
       return View();
     }
 
     [HttpPost]
-    public ActionResult Create(Machine machine)
+    public ActionResult New(Machine machine)
     {
       _db.Machines.Add(machine);
       _db.SaveChanges();

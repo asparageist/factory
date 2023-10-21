@@ -22,14 +22,14 @@ namespace Factory.Controllers
       return View(_db.Engineers.ToList());
     }
 
-    public ActionResult Create()
+    public ActionResult New()
     {
       ViewBag.PageTitle = "Add an Engineer";
       return View();
     }
 
     [HttpPost]
-    public ActionResult Create(Engineer engineer)
+    public ActionResult New(Engineer engineer)
     {
       _db.Engineers.Add(engineer);
       _db.SaveChanges();
