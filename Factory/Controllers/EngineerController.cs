@@ -9,7 +9,7 @@ namespace Factory.Controllers
 {
   public class EngineerController : Controller
   {
-    private readonly EngineerContext _db;
+    private readonly FactoryContext _db;
 
     public EngineerController(FactoryContext db)
     {
