@@ -1,3 +1,7 @@
 body {
+  color: rgb(172, 169, 184);
   text-align: center;
+  background-image: url('/good_doctor.png');
+  background-size: cover;
+  background-position: top center;
 }
