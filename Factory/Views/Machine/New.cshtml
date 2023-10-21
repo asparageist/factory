@@ -1,0 +1,19 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Practice.Models.Machine
+
+<h4>Add a new machine</h4>
+
+
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.MachineName)
+  @Html.TextBoxFor(model => model.MachineName)
+  @Html.ValidationMessageFor(model => model.MachineName)
+  <input type="submit" value="Add new machine" class="btn btn-primary" />
+
+}
+<p>@Html.ActionLink("Show all machines", "Index")</p>
+<p>@Html.ActionLink("Back to Home", "Index", "Home")</p>
