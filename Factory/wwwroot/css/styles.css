@@ -1,4 +1,11 @@
+@font-face {
+  font-family: indieflower;
+  src: url(/AveriaSansLibre-Bold.ttf);
+}
+
+
 body {
+  font-family: 'indieflower';
   color: rgb(172, 169, 184);
   text-align: center;
   background-image: url('/good_doctor.png');
