@@ -5,7 +5,7 @@
 @using Factory.Models
 @model Factory.Models.Machine
 
-<h2>@Model.MachineName's Details</h2>
+<h2>@Model.MachineName</h2>
 
 @if (@Model.JoinEntities.Count == 0)
 {
@@ -25,3 +25,5 @@ else
 @Html.ActionLink("Add Licensed Engineer", "AddEngineer", new { id = Model.MachineID })
 <br>
 @Html.ActionLink("Remove Licensed Engineer", "Delete", new { id = Model.MachineID })
+<br>
+@Html.ActionLink("Other Machines", "Index", new { id = Model.MachineID })
