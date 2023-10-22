@@ -2,6 +2,45 @@
   Layout = "_Layout";
 }
 
-<h1>Welcome to Dr. Sillystringz Factory of Fun!</h1>
-<p>@Html.ActionLink("See all Engineers", "Index", "Engineer")</p>
-<p>@Html.ActionLink("See all Machines", "Index", "Machine")</p>
+<div id="titleCard">
+  <h1>Welcome to Dr. Sillystringz Factory of Fun!</h1>
+  <h4>Each engineer needs licenses for each machine.</h4>
+  <h4>Click on engineers to see their licenses,</h4>
+  <h4>or click on machines to see who can use them.</h4>
+</div>
+
+<div class="homeList">
+  <h2 class="boxed">Engineers</h2>
+  @if (ViewBag.Engineers != null && ViewBag.Engineers.Count > 0)
+  {
+    <ul>
+      @foreach (var engineer in ViewBag.Engineers)
+      {
+        <li class="boxed">@engineer.EngineerName</li>
+      }
+    </ul>
+  }
+  else
+  {
+    <p class="boxed">No engineers yet.</p>
+  }
+  <p class="boxed">@Html.ActionLink("Edit Engineers", "Index", "Engineer")</p>
+</div>
+
+<div class="homeList">
+  <h2 class="boxed">Machines</h2>
+  @if (ViewBag.Machines != null && ViewBag.Machines.Count > 0)
+  {
+    <ul>
+      @foreach (var machine in ViewBag.Machines)
+      {
+        <li class="boxed">@machine.MachineName</li>
+      }
+    </ul>
+  }
+  else
+  {
+    <p class="boxed">No machines yet.</p>
+  }
+  <p class="boxed">@Html.ActionLink("Edit Machines", "Index", "Machine")</p>
+</div>

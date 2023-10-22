@@ -2,6 +2,43 @@ body {
   color: rgb(172, 169, 184);
   text-align: center;
   background-image: url('/good_doctor.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   background-position: top center;
 }
+
+a:link {
+  color: rgb(172, 169, 184);
+}
+
+a:visited {
+  color:darkgray;
+}
+
+a:hover {
+  color: white;
+}
+
+.boxed {
+  padding: 2%;
+  background-color:rgba(78, 78, 78, 0.6);
+  outline: 4px solid rgb(0, 0, 0);
+  border-radius: 5px;
+}
+
+.homeList {
+  display: grid;
+  place-items: center;
+  height: 65vh;
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+#footer {
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
