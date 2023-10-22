@@ -1,0 +1,27 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Factory.Models
+@model Factory.Models.Engineer
+
+<h2>@Model.EngineerName's Details</h2>
+
+@if (@Model.JoinEntities.Count == 0)
+{
+  <p>This engineer does not have any licenses.</p>
+}
+else
+{
+  <h4>Legal licenses:</h4>
+  <ul>
+    @foreach (EngineerMachine join in Model.JoinEntities)
+    {
+      <li>@join.Machine.MachineName</li>
+    }
+  </ul>
+}
+
+@Html.ActionLink("Add Machine License", "AddMachine", new { id = Model.EngineerID })
+<br>
+@Html.ActionLink("Remove Machine License", "Delete", new { id = Model.EngineerID })

@@ -11,7 +11,7 @@ namespace Factory.Models
     [Required(ErrorMessage = "Machine must have name: please add a name.")]
     public string MachineName { get; set; }
 
-    public List<EngineerMachine> JoinEntities { get; set; }
+    public List<EngineerMachine> JoinEntities { get; }
 
   }
 }

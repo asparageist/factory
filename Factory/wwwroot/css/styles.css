@@ -8,6 +8,10 @@ body {
   background-position: top center;
 }
 
+li {
+  list-style-type: none;
+}
+
 a:link {
   color: rgb(172, 169, 184);
 }
