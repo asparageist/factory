@@ -94,6 +94,38 @@ namespace Factory.Controllers
       return RedirectToAction("Index");
     }
 
+    [HttpGet]
+    public ActionResult RemoveEngineer(int id)
+    {
+      Machine thisMachine = _db.Machines.FirstOrDefault(machines => machines.MachineID == id);
+      var onlyEngineerIDs = _db.EngineerMachines
+                              .Where(em => em.MachineID == id)
+                              .Select(em => em.EngineerID)
+                              .ToList();
+
+      var onlyEngineers = _db.Engineers
+                              .Where(m => onlyEngineerIDs.Contains(m.EngineerID))
+                              .ToList();
+
+      ViewBag.EngineerID = new SelectList(onlyEngineers, "EngineerID", "EngineerName");
+      return View(thisMachine);
+    }
+
+
+    [HttpPost]
+    public ActionResult RemoveEngineer(Machine machine, int engineerID)
+    {
+      EngineerMachine joinEntity = _db.EngineerMachines
+          .FirstOrDefault(join => join.EngineerID == engineerID && join.MachineID == machine.MachineID);
+
+      if (joinEntity != null)
+      {
+        _db.EngineerMachines.Remove(joinEntity);
+        _db.SaveChanges();
+      }
+
+      return RedirectToAction("Details", new { id = machine.MachineID });
+    }
 
   }
 }

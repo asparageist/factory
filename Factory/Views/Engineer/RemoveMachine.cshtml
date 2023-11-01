@@ -9,10 +9,9 @@
 @using (Html.BeginForm())
 {
   @Html.HiddenFor(model => model.EngineerID)
+  @Html.DropDownList("MachineID", (SelectList)ViewBag.MachineID)
 
-  @Html.DropDownList("MachineID")
-
-  <input type="submit" value="Save" />
+  <input type="submit" value="Remove" />
 }
 
 <p>@Html.ActionLink("Back to Engineers", "Index")</p>

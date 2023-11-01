@@ -24,6 +24,11 @@ else
 
 @Html.ActionLink("Add Machine License", "AddMachine", new { id = Model.EngineerID })
 <br>
+@if (@Model.JoinEntities.Count != 0)
+{
+  @Html.ActionLink("Remove Machine License", "RemoveMachine", new { id = Model.EngineerID })
+}
+<br>
 @Html.ActionLink("Edit Engineer", "Edit", new { id = Model.EngineerID })
 <br>
 @Html.ActionLink("Delete Engineer", "Delete", new { id = Model.EngineerID })

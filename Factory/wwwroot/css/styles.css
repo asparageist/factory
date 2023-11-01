@@ -38,6 +38,14 @@ a:hover {
   border-radius: 5px;
 }
 
+.boxed:hover {
+  padding: 2%;
+  background-color:rgba(163, 163, 163, 0.6);
+  outline: 8px solid rgb(0, 0, 0);
+  border-radius: 5px;
+}
+
+
 .homeList {
   display: grid;
   place-items: center;
