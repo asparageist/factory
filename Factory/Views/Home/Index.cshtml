@@ -16,7 +16,7 @@
     <ul>
       @foreach (var engineer in ViewBag.Engineers)
       {
-        <li class="boxed">@engineer.EngineerName</li>
+        <li class="boxed engineer">@engineer.EngineerName</li>
       }
     </ul>
   }
@@ -34,7 +34,7 @@
     <ul>
       @foreach (var machine in ViewBag.Machines)
       {
-        <li class="boxed">@machine.MachineName</li>
+        <li class="boxed machine">@machine.MachineName</li>
       }
     </ul>
   }

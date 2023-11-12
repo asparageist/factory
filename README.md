@@ -35,11 +35,15 @@ This app helps Dr. Sillystringz factory managers to keep track of Engineers and 
    }
    ```
 
-5. Set up the Database from the file `joseph_murray_factory.sql`.
+5. Set up the Database from the file: `$ dotnet ef database update`
 6. Run `$ dotnet watch run` in the command line to start the project in development mode with a watcher.
 7. Open the browser at: _https://localhost:5001_.
 
-## licensing info
+## Known Bugs
+
+None forthcoming.
+
+## Licensing Info
 
 *Copyright (c) 10/22/2023 Joseph Murray
 *MIT license below
